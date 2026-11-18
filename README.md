@@ -80,7 +80,7 @@ Tout est dans **Settings**, sur la page du dépôt.
 **Settings → Collaborators → Add people** : le compte GitHub de votre binôme.
 **Settings → Advanced Security** (ou **Code security**) **→ Push protection → Enable** : GitHub refusera un push qui contient un secret.
 </details>
-
+7
 ### 4. Commit et push avec le bouton Source Control.
 
 **Vous devez voir** : le commit sur GitHub.
@@ -126,7 +126,7 @@ jobs:
 Ligne du badge, à coller sous le titre de ce `README.md` (remplacez `<votre-compte>` par votre compte GitHub) :
 
 ```markdown
-![ci](https://github.com/<votre-compte>/kelvia-api/actions/workflows/ci.yml/badge.svg)
+![ci](https://github.com/pndabrkr76/kelvia-api/actions/workflows/ci.yml/badge.svg)
 ```
 
 **Vous devez voir** : la pastille verte, puis le badge vert.
