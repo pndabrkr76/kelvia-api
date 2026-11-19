@@ -6,7 +6,7 @@ terraform {
 }
 
 variable "nombre_vm" {
-  default = 2
+  default = 3
 }
 
 resource "docker_network" "kelvia" {

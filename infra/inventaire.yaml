@@ -3,10 +3,12 @@ all:
   vars: {ansible_connection: community.docker.docker,
          ansible_python_interpreter: /usr/local/bin/python3}
 recette:
-  hosts: {vm-web-1: }
+  hosts: {vm-web-1: , vm-web-3: }
   vars: {environnement: RECETTE,
-         maintenance: false}
+         maintenance: false,
+         message: "Ventes en test"}
 production:
   hosts: {vm-web-2: }
   vars: {environnement: PRODUCTION,
-         maintenance: false}
+         maintenance: false,
+         message: "Ouverture à 20 h"}
