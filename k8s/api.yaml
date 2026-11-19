@@ -1,0 +1,20 @@
+# Bonus 6 : « je veux 2 copies de l'API ». Kubernetes s'occupe de les maintenir.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kelvia-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels: {app: kelvia-api}
+  template:
+    metadata:
+      labels: {app: kelvia-api}
+    spec:
+      containers:
+        - name: api
+          image: kelvia-api-api:latest
+          imagePullPolicy: IfNotPresent   # l'image vient de notre machine, pas d'internet
+          ports: [{containerPort: 8000}]
+          readinessProbe:
+            httpGet: {path: /health, port: 8000}
