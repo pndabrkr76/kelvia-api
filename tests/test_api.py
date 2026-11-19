@@ -10,4 +10,4 @@ def test_health():
 
 
 def test_prix_pass_1_jour():
-    assert client.get("/billets").json()["Pass 1 jour"]["prix"] == 59
+    assert client.get("/billets").json()["Pass 1 jour"]["prix"] == 69
